@@ -1,13 +1,30 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './container/app/App';
 import reportWebVitals from './reportWebVitals';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  :root{
+    --accent: #1ed760;
+  }
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: 'Cabin', sans-serif;
+    background-color: black;
+    color: var(--accent);
+  }
+`;
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
+    <GlobalStyle />
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 );
 
