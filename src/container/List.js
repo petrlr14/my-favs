@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Card } from '../components/card';
-import Select from 'react-select';
 
 const TYPES = {
   TRACKS: { value: 'tracks', label: 'Tracks' },
@@ -16,7 +15,7 @@ const Container = styled.div`
   overflow: scroll;
 `;
 
-const SelectContainer = styled.div`
+/* const SelectContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -24,7 +23,7 @@ const SelectContainer = styled.div`
   > {
     margin-left: 1em;
   }
-`;
+`; */
 
 export function List({ token }) {
   const [type] = useState(TYPES.TRACKS.value);
